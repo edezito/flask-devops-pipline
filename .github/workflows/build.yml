@@ -1,0 +1,19 @@
+name: 🚧 Build da Aplicação
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout do código
+      uses: actions/checkout@v3
+
+    - name: 🐳 Build da imagem Docker
+      run: |
+        docker build -t flask-api .

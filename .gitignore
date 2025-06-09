@@ -1,0 +1,25 @@
+# Ambiente Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.env
+*.log
+
+# VSCode
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+*.tar
+
+# Arquivos de build/testes
+*.egg-info/
+dist/
+build/
+
+# Outros
+.env

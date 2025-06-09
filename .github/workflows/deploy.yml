@@ -1,0 +1,17 @@
+name: 🚀 Deploy para Render
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout
+      uses: actions/checkout@v3
+
+    - name: 🔔 Notificar deploy via webhook (Render)
+      run: |
+        curl -X POST https://api.render.com/deploy/srv-XXXXXXXXXXXXXX?key=SEU_DEPLOY_KEY
